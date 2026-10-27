@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NoiseFile · George Abrahamyants</title><link rel="stylesheet" href="style.css"><link rel="icon" href="data:,"></head><body><div class="wrap">
+<nav class="crumbs"><a href="index.html">George Abrahamyants</a> / NoiseFile</nav>
+<header class="top"><h1>NoiseFile</h1><p class="lede">A noise complaint checked against the city's own ordinance, across 36 Bay Area cities, filed the way that city wants.</p>
+<div class="row"><a class="btn" href="https://play.google.com/store/search?q=Neighbor%20Noise%20Complaint%20Kit&c=apps">On Google Play</a><a class="btn ghost" href="https://github.com/gugosf114/noisefile-android">Read the code</a></div></header>
+
+<ul class="facts" style="margin-top:22px"><li><b>36</b><span>Bay Area cities</span></li><li><b>108</b><span>city-and-noise-type workflows</span></li><li><b>52</b><span>archived official sources, hashed</span></li></ul>
+
+<h2>The problem</h2>
+<p>Every city handles noise differently: what counts, who you call, what evidence they want, which form. People measure with a phone app, call the wrong line, and get nowhere. The rule exists, in the municipal code, and nobody reads it for them.</p>
+
+<h2>My part</h2>
+<p>All of it. I read the codes, built the rule set, wrote the Android app, drew the store listing, and shipped it on Google Play with billing. The legal reading is the part a lawyer brings: each rule is quoted from the city's current code on screen, with its section number, and the app never calls a phone reading a legal verdict. Tests enforce that boundary.</p>
+
+<figure><img src="img/noisefile.jpg" alt="Home screen with San Jose's workflow, and a rule screen quoting the code section"><figcaption>Store screenshots. Left: the city's process for what you are hearing. Right: the code, quoted.</figcaption></figure>
+
+<h2>Key choices and why</h2>
+<dl>
+<dt>Quote the code, never paraphrase it.</dt><dd>"THE CODE SAYS · Planning Code 17.120.050(G)(2)." The user can take that line to the city. Paraphrase would be my opinion; the quote is the law.</dd>
+<dt>Local-first.</dt><dd>No account, no analytics, no ads. Measurements and the incident log stay on the phone. A complaint kit that phones home would be a different product.</dd>
+<dt>One paid unlock.</dt><dd>$7.99 for the sealed PDF report, the city form guide, and the filled-in city email. Knowing the rule is free; the paperwork is the product.</dd>
+<dt>Sources with hashes.</dt><dd>52 official sources archived with content hashes, so a rule can be traced to the exact page it came from on the day it was read.</dd>
+</dl>
+
+<h2>What resulted</h2>
+<p>Production on Google Play since October 2026 under the name Neighbor Noise Complaint Kit, publisher WiM Labs. The listing was approved with the legal citations in it. First sale recorded. Work in progress: ratings and reach.</p>
+
+<h2>Proof</h2>
+<ul><li><a href="https://play.google.com/store/search?q=Neighbor%20Noise%20Complaint%20Kit&c=apps">The Play listing</a></li><li><a href="https://github.com/gugosf114/noisefile-android">Public repository</a>: rules, sources, tests, store assets</li></ul>
+<footer><a href="index.html">Back to the front page</a></footer></div></body></html>

@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bakers Agent · George Abrahamyants</title><link rel="stylesheet" href="style.css"><link rel="icon" href="data:,"></head><body><div class="wrap">
+<nav class="crumbs"><a href="index.html">George Abrahamyants</a> / Bakers Agent</nav>
+<header class="top"><h1>Bakers Agent</h1><p class="lede">An AI operations system that runs a real bakery's marketing every day, behind human approval gates.</p>
+<div class="row"><a class="btn" href="https://bakers-agent.web.app/mbc/">Open the live dashboard</a><a class="btn ghost" href="https://github.com/gugosf114/bakers-agent">Read the code</a><a class="btn ghost" href="https://mybakingcreations.com">The business it runs</a></div></header>
+
+<ul class="facts" style="margin-top:22px"><li><b>40+</b><span>cloud functions in named pipelines</span></li><li><b>5</b><span>platforms posted to after one tap</span></li><li><b>0</b><span>posts, spends, or sends without a human</span></li></ul>
+
+<h2>The problem</h2>
+<p>My Baking Creations is a family bakery in Daly City with Fortune 500 corporate clients and no marketing staff. Posting, SEO, review replies, lead follow-up, and the numbers were all done by hand, late, or not at all. The question was whether a small business could have the operations layer a large one has, without hiring for it.</p>
+
+<h2>My part</h2>
+<p>I designed, built, and operate the whole system, alone, since 2025. Architecture, every pipeline, the dashboard, the prompts, the deploys, the on-call. I also use it, which is why the approval gates are where they are.</p>
+
+<figure><img src="img/bakers-agent.png" alt="The Today screen: six replies waiting, money this week, leads, visits, reply time"><figcaption>The Today screen on October 27, 2026, as the owner sees it. Customer names cropped.</figcaption></figure>
+
+<h2>Key choices and why</h2>
+<dl>
+<dt>Human gate on anything that sends or spends.</dt><dd>Photos become drafts; Gemini describes the photos, Claude writes the title, caption, labels and alt text; nothing posts until the owner taps Approve. Review replies are drafted, never sent. Ads are drafted with a budget gate. The autonomous tracks (SEO, visibility, analytics, memory) only produce pull requests, reports, and alerts.</dd>
+<dt>SEO as pull requests, not edits.</dt><dd>Search Console data becomes opportunities, briefs, and then a pull request on the website repo with a quality gate. A feedback loop measures each merged PR before and after and feeds the result back into what gets proposed next.</dd>
+<dt>Event-driven, with a red light.</dt><dd>Python 3.12 on Google Cloud Functions, Firestore, Pub/Sub with dead-letter queues, Cloud Scheduler, Secret Manager, GitHub Actions. A System tile turns red when a function is stuck, a post failed, or the deploy is behind GitHub.</dd>
+<dt>Two model families on purpose.</dt><dd>Gemini for looking at photos, Claude for writing and judgment, with a sentinel check on every caption. Reels: three to eight photos become a phone-sized video with each platform's own words, and Claude picks whether the set is one theme or a mix.</dd>
+</dl>
+
+<h2>What resulted</h2>
+<p>A business that depends on it. Posts go to Google Business Profile (two listings), Facebook, Instagram, Pinterest, and YouTube Shorts from one upload. Leads from the website and Instagram land in one queue with replies drafted. The Money tab shows every number for any period against the same days before, including visits that came from AI apps. A multi-client version, Bakers Agent 2, is in progress.</p>
+
+<h2>Proof</h2>
+<ul><li><a href="https://bakers-agent.web.app/mbc/">The live dashboard</a> (owner sign-in; ask and I will walk you through it)</li><li><a href="https://github.com/gugosf114/bakers-agent">Public repository</a>, with the README that documents every pipeline</li><li><a href="https://mybakingcreations.com">mybakingcreations.com</a>, the site it feeds, ~2,000 visitors a month on zero ad spend</li></ul>
+<footer><a href="index.html">Back to the front page</a></footer></div></body></html>

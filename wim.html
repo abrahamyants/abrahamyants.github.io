@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WiM + Lavrentiy · George Abrahamyants</title><link rel="stylesheet" href="style.css"><link rel="icon" href="data:,"></head><body><div class="wrap">
+<nav class="crumbs"><a href="index.html">George Abrahamyants</a> / WiM + Lavrentiy</nav>
+<header class="top"><h1>WiM + Lavrentiy</h1><p class="lede">Voice-to-text for people who stutter or speak accented English. A bubble over any app; you end the take; clean text lands where you were typing.</p>
+<div class="row"><a class="btn" href="https://github.com/abrahamyants/wim-android">WiM for Android</a><a class="btn ghost" href="https://github.com/abrahamyants/lavrentiy">Lavrentiy for Windows</a></div></header>
+
+<ul class="facts" style="margin-top:22px"><li><b>35</b><span>claims, U.S. provisional App. No. 64/100,336, sole inventor</span></li><li><b>4</b><span>layers: transcribe, reconstruct, personal profile, disfluency</span></li><li><b>11</b><span>languages for cloud transcription; 5 for the desktop interface</span></li></ul>
+
+<h2>The problem</h2>
+<p>Dictation tools assume fluent speech. They cut you off on a pause, "fix" a block into the wrong word, and lose the sentence when the app underneath changes focus. For someone with a stutter, an accent, or both, that is every message. I built this for myself first.</p>
+
+<h2>My part</h2>
+<p>Sole designer, developer, and inventor. The Android app, the Windows program, the speech pipeline, the calibration method, and the patent application. I am also the primary test subject: I live with a speech block and a strong accent, and arrived in the United States without English.</p>
+
+<figure><img src="img/wim.jpg" alt="WiM on Android and Lavrentiy on Windows, two implementations of one system"><figcaption>Two implementations of one system. Left: WiM on the phone. Right: Lavrentiy, the desktop engine and lab.</figcaption></figure>
+<figure><img src="img/wim-bubble.png" alt="The WiM bubble resting at the bottom of the phone's home screen, marked IDLE"><figcaption>The bubble, idle, over the home screen. It follows you into any app.</figcaption></figure>
+
+<h2>Key choices and why</h2>
+<dl>
+<dt>You end the take.</dt><dd>No timer. A block or a long pause is not the end of a sentence. The app waits.</dd>
+<dt>Clarify without touching the app underneath.</dt><dd>Up to three uncertain words are shown for approval inside the bubble, with the host app's focus, cursor, scroll, keyboard, and selection left exactly where they were. If the write fails, the text is kept, not lost. This is claim 1 of the patent.</dd>
+<dt>Never send on its own.</dt><dd>A send-ready countdown disarms instead of firing; the bubble moves onto the app's own Send button and you press it. Password fields are refused outright.</dd>
+<dt>A disfluency layer with a preservation guard.</dt><dd>Blocks, part-word repetitions, prolongations, and covert word swaps (the app's name: What I Meant) are reconstructed, while an intended "really really" survives. Delayed auditory feedback is built in.</dd>
+<dt>Calibration the user confirms.</dt><dd>On the desktop, a 60-prompt calibration where every transcript is confirmed by the user before it becomes ground truth. Per-person profiles, a local audio archive, covert-stutter detection, first-language transfer packs for nine languages.</dd>
+</dl>
+
+<h2>What resulted</h2>
+<p>WiM is in Google Play closed testing (release 1.0.0, October 2026) with pricing live: Free, Cloud $4.99, Cloud Plus $7.99. Lavrentiy v1.7.11 installs on Windows with the speech model inside and works offline. The provisional patent was filed June 27, 2026. Next: the Play testing round, then production.</p>
+
+<h2>Proof</h2>
+<ul><li><a href="https://github.com/abrahamyants/wim-android">WiM repository</a> (public)</li><li><a href="https://github.com/abrahamyants/lavrentiy/releases/latest">Lavrentiy installer</a>, ~508 MB, no account</li><li>U.S. provisional App. No. 64/100,336: filing available on request</li></ul>
+<footer><a href="index.html">Back to the front page</a></footer></div></body></html>
